@@ -1,4 +1,4 @@
-add_library(imgui STATIC
+add_library(ImGui STATIC
 	examples/imgui_impl_sdl.cpp
     examples/imgui_impl_opengl3.cpp
     imgui.cpp
@@ -7,14 +7,15 @@ add_library(imgui STATIC
     imgui_widgets.cpp
 )
 
-target_include_directories(imgui
+target_include_directories(ImGui
 	PUBLIC ./
+    PUBLIC ./examples
 )
 
-target_compile_definitions(imgui PRIVATE -DGLEW_STATIC)
-target_compile_definitions(imgui PRIVATE IMGUI_IMPL_OPENGL_LOADER_GLEW)
+target_compile_definitions(ImGui PRIVATE -DGLEW_STATIC)
+target_compile_definitions(ImGui PRIVATE IMGUI_IMPL_OPENGL_LOADER_GLEW)
 
-target_link_libraries(imgui
+target_link_libraries(ImGui
     SDL2-static
     glew
 )
