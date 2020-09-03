@@ -7,8 +7,6 @@ add_library(imgui STATIC
     imgui_widgets.cpp
 )
 
-add_library(imgui)
-
 target_include_directories(imgui
 	PUBLIC include
 )
