@@ -8,7 +8,7 @@ add_library(imgui STATIC
 )
 
 target_include_directories(imgui
-	PUBLIC include
+	PUBLIC ./
 )
 
 target_compile_definitions(imgui PRIVATE -DGLEW_STATIC)
