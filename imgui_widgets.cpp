@@ -3628,7 +3628,7 @@ void ImGuiInputTextCallbackData::DeleteChars(int pos, int bytes_count)
         *dst++ = c;
     *dst = '\0';
 
-    if (CursorPos + bytes_count >= pos)
+    if (CursorPos >= pos + bytes_count)
         CursorPos -= bytes_count;
     else if (CursorPos >= pos)
         CursorPos = pos;
