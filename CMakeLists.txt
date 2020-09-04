@@ -20,4 +20,5 @@ target_compile_definitions(ImGui PRIVATE IMGUI_IMPL_OPENGL_LOADER_GLEW)
 target_link_libraries(ImGui
     SDL2-static
     glew
+    glfw
 )
